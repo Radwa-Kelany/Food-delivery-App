@@ -11,6 +11,12 @@
             2.2 Remove items
             2.3 Change quantity (+, -)
         3.	Clear cart  
-
-## FlowChart 
+## EDR
+![System Architecture](docs/add_to_cart-EDR.svg)
+## Flowchart 
 ![System Architecture](docs/add_to_cart-flowchart.svg)
+ ## Sequence Diagram - Add to cart
+![System Architecture](docs/add_to_cart-sequence diagram.svg)
+
+ ## Sequence Diagram - Modify cart
+ ![System Architecture](docs/modify_cart-sequence diagram.svg)
