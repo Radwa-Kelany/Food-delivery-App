@@ -3,7 +3,7 @@
 ### 1. Cart Management Feature 
      •	Database Design 
         1.	Cart 
-        2.	Cart_items 
+        2.	Cart_details
      •	API Endpoints
         1.	Add to cart 
         2.	Modify cart
