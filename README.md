@@ -13,3 +13,4 @@
         3.	Clear cart  
 
 ## FlowChart 
+![System Architecture](docs/add_to_cart-flowchart.svg)
