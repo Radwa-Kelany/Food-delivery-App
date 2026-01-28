@@ -11,3 +11,5 @@
             2.2 Remove items
             2.3 Change quantity (+, -)
         3.	Clear cart  
+
+## FlowChart 
