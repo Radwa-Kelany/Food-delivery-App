@@ -16,7 +16,7 @@
 ## Flowchart 
 ![System Architecture](docs/add_to_cart-flowchart.svg)
  ## Sequence Diagram - Add to cart
-![System Architecture](docs/add_to_cart-sequence diagram.svg)
+![System Architecture](docs/add_to_cart-sequence_diagram.svg)
 
  ## Sequence Diagram - Modify cart
- ![System Architecture](docs/modify_cart-sequence diagram.svg)
+ ![System Architecture](docs/modify_cart-sequence_diagram.svg)
