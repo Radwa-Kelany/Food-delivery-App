@@ -5,16 +5,17 @@
 3. Cart Management.
 4. Order Management.
 5. Payment Integration Management.
-6. Customer Management.
-7. Dashboard & Reports
+6. Customer Support Management.
+7. Notification & Email Management
+8. Dashboard & Reports
 ## Functions:
 ### 1. User Registeration & Authentication
-     •  **Database Design 
+     • Database Design 
         1. Customer
         2. Partner
         3. Delivery Captain
         4. Admin
-     •	API Endpoints
+     • API Endpoints
         1. Create Account /Sign Up
         2. Login
         3. Logout
@@ -22,7 +23,24 @@
         5. Enable/Disable Account
         6. Third Party Authentication: Social Media, Google ...
         7. User Profile: Show, Edit.
-### 2. Cart Management Feature 
+### 2. Restaurant & Menu Management
+     • Database Design 
+        1. Resturant
+        2. Menu
+        3. Menu_Items
+     • API Endpoints
+        1. Add Restaurant         
+        2. Update Restaurant      
+        3. Delete Restaurant
+        4. View Restaurants - Categories Tabs - Recommendations - Near You - Daily Offers- Top Rating ...      
+        5. View Single Restaurant 
+        6. Search Restaurant       
+        7. Add Menu              
+        8. Update Menu           
+        9. Delete Menu          
+        10. View Menu            
+        11. Filter Menu / Item    
+### 3. Cart Management
      •	Database Design 
         1. Cart 
         2. Cart_details
@@ -33,7 +51,55 @@
             2.2 Remove items
             2.3 Change quantity (+, -)
         3. Clear cart  
-
+        4. Checkout
+### 4. Order Management
+     • Database Design 
+        1. Order
+        2. Order_Items
+        3. Order_Status
+     • API Endpoints
+        1. Place Order     
+        2. Cancel Order by customer/restaurant    
+        3. Track Order
+        4. View Order summary
+        5. View Order details
+        6. View Orders History
+        7. Update Order Status
+        8. Send Email confirmation
+        9. Send order status notification
+### 5. Payment Integration Management
+     • Database Design 
+        1. Transaction
+        2. Payment Integration Type 
+        3. Payment Integration Configuration
+        4. Payment Status
+        5. Customer Cart Info
+        6. Partner Bank Account
+        7. Auditing
+     • API Endpoints
+        1. Payment Integration with 3rd Party
+        2. Select Payment method
+        3. Customer Add Card
+        4. Create Transaction
+        5. View Payment Transaction
+        6. Create Transaction Receipt
+        7. send Email Notification 
+### 6. Customer support Management
+     • Database Design 
+        1. Comments & Ratings
+        2. Complains
+     • API Endpoints
+        1. Rasie a Complain
+        2. Add Rate to restaurant
+        3. Need Help       
+ ### 7. Notification & Email Management
+     • Database Design 
+        1. Notifcations
+        2. Emails
+     • API Endpoints
+        1. Send Notification
+        2. Send Email
+        
 ## EDR
 ![System Architecture](docs/add_to_cart-EDR.svg)
 ## Flowchart 
