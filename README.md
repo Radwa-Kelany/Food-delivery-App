@@ -100,9 +100,10 @@
         1. Send Notification
         2. Send Email
         
-## EDR
-![System Architecture](docs/add_to_cart-EDR.svg)
-## Flowchart 
+## ERD
+![System Architecture](docs/ERD-food_delivery_app.svg)
+
+## Flowchart -Add To cart
 ![System Architecture](docs/add_to_cart-flowchart.svg)
  ## Sequence Diagram - Add to cart
 ![System Architecture](docs/add_to_cart-sequence_diagram.svg)
