@@ -9,30 +9,30 @@
 7. Dashboard & Reports
 ## Functions:
 ### 1. User Registeration & Authentication
-     •### Database Design 
-        1.	Customer
-        2.	Partner
-        3.     Delivery Captain
-        4.     Admin
+     •  Database Design 
+        1. Customer
+        2. Partner
+        3. Delivery Captain
+        4. Admin
      •	API Endpoints
-        1.	Create Account /Sign Up
-        2.	Login
-        3.     Logout
-        4.     Forget Password
-        5.     Enable/Disable Account
-        6.     Third Party Authentication: Social Media, Google ...
-        7.     User Profile: Show, Edit.
+        1. Create Account /Sign Up
+        2. Login
+        3. Logout
+        4. Forget Password
+        5. Enable/Disable Account
+        6. Third Party Authentication: Social Media, Google ...
+        7. User Profile: Show, Edit.
 ### 2. Cart Management Feature 
      •	Database Design 
-        1.	Cart 
-        2.	Cart_details
+        1. Cart 
+        2. Cart_details
      •	API Endpoints
-        1.	Add to cart 
-        2.	Modify cart
+        1. Add to cart 
+        2. Modify cart
             2.1 Add items
             2.2 Remove items
             2.3 Change quantity (+, -)
-        3.	Clear cart  
+        3. Clear cart  
 
 ## EDR
 ![System Architecture](docs/add_to_cart-EDR.svg)
