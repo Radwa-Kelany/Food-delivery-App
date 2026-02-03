@@ -1,6 +1,28 @@
 # Food-Delivery-App
-## Features and Functions:
-### 1. Cart Management Feature 
+## Features:
+1. User Registeration & Authentication.
+2. Restaurant & Menu Management.
+3. Cart Management.
+4. Order Management.
+5. Payment Integration Management.
+6. Customer Management.
+7. Dashboard & Reports
+## Functions:
+### 1. User Registeration & Authentication
+     •### Database Design 
+        1.	Customer
+        2.	Partner
+        3.     Delivery Captain
+        4.     Admin
+     •	API Endpoints
+        1.	Create Account /Sign Up
+        2.	Login
+        3.     Logout
+        4.     Forget Password
+        5.     Enable/Disable Account
+        6.     Third Party Authentication: Social Media, Google ...
+        7.     User Profile: Show, Edit.
+### 2. Cart Management Feature 
      •	Database Design 
         1.	Cart 
         2.	Cart_details
@@ -11,6 +33,7 @@
             2.2 Remove items
             2.3 Change quantity (+, -)
         3.	Clear cart  
+
 ## EDR
 ![System Architecture](docs/add_to_cart-EDR.svg)
 ## Flowchart 
