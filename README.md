@@ -9,7 +9,7 @@
 7. Dashboard & Reports
 ## Functions:
 ### 1. User Registeration & Authentication
-     •  Database Design 
+     •  **Database Design 
         1. Customer
         2. Partner
         3. Delivery Captain
