@@ -183,3 +183,31 @@ function IncrementQuantity(cart_id, item_id) {
 //  B- decrease quantity
 decrementQuantity(cart_id, item_id);
 ```
+
+### API Signature 
+    Order management 
+        - placeOrder
+                - signature /api/v1/order/add
+                - input [customer_id,order_items[]]
+                - output status code [201]
+        - cancelOrder
+                - signature /api/v1/order/cancel
+                - input [customer_id,order_id]
+                - output status code [200]
+        - trackOrder
+                - signature /api/v1/order/track
+                - input [customer_id,order_id]
+                - output order_status
+        - viewOrder
+                - signature /api/v1/order/:order_id
+                - input [customer_id,order_id]
+                - output order_details
+        - viewOrders_History
+                - signature /api/v1/order
+                - input [customer_id]
+                - output orders[]
+        - checkout
+                - signature /api/v1/checkout
+                - input [customer_id,total_amount]
+                - output status code [201], transaction_details
+                - output status code [201]            
