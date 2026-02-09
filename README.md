@@ -79,11 +79,10 @@
      • API Endpoints
         1. Payment Integration with 3rd Party
         2. Select Payment method
-        3. Customer Add Card
-        4. Create Transaction
-        5. View Payment Transaction
-        6. Create Transaction Receipt
-        7. send Email Notification 
+        3. Create Transaction
+        4. View Payment Transaction
+        5. Create Transaction Receipt
+        6. send Email Notification 
 ### 6. Customer support Management
      • Database Design 
         1. Comments & Ratings
@@ -91,7 +90,8 @@
      • API Endpoints
         1. Rasie a Complain
         2. Add Rate to restaurant
-        3. Need Help       
+        3. Need Help     
+        4. Customer Add Card
  ### 7. Notification & Email Management
      • Database Design 
         1. Notifcations
@@ -186,13 +186,6 @@ decrementQuantity(cart_id, item_id);
 
 ### API Signature 
 #### User Registeration
-        1. Create Account /Sign Up
-        2. Sign
-        3. Logout
-        4. Forget Password
-        5. Enable/Disable Account
-        6. Third Party Authentication: Social Media, Google ...
-        7. User Profile: Show, Edit.
         - Sign up
                 - signature /api/v1/user/signup
                 - input [user_details{}]
@@ -255,6 +248,10 @@ decrementQuantity(cart_id, item_id);
                 - signature /api/v1/order
                 - input [customer_id]
                 - output orders[]
+         - Checkout
+                - signature /api/v1/checkout
+                - input [customer_id, payment_type, total_price]
+                - output status code 201, transaction_details
 #### Resturant & Menu management 
         - AddResturant
                 - signature /api/v1/Resturant/add
@@ -296,3 +293,25 @@ decrementQuantity(cart_id, item_id);
                 - signature /api/v1/resturant/menu/filter
                 - input [search_word]
                 - output menu_details[]
+  #### Payment management 
+        - View Payment Transaction
+                - signature /api/v1/payment/transaction
+                - input [customer_id,transaction_id]
+                - output status code [200], transaction_details
+        - Add Rate
+                - signature /api/v1/payment/receipt
+                - input [customer_id, transaction_id]
+                - output status code [200], tranastion_pdf
+  #### Customer management 
+        - Need Help
+                - signature /api/v1/support/help
+                - input [customer_id,need_type]
+                - output status code [200]
+        - Add Rate
+                - signature /api/v1/support/rate
+                - input [customer_id, resturant_id, rate, comment]
+                - output status code [201]
+         - Customer Add Card
+                - signature /api/v1/support/addCart
+                - input [customer_id, cart_details]
+                - output status code [201]
