@@ -185,7 +185,56 @@ decrementQuantity(cart_id, item_id);
 ```
 
 ### API Signature 
-    Order management 
+#### User Registeration
+        1. Create Account /Sign Up
+        2. Sign
+        3. Logout
+        4. Forget Password
+        5. Enable/Disable Account
+        6. Third Party Authentication: Social Media, Google ...
+        7. User Profile: Show, Edit.
+        - Sign up
+                - signature /api/v1/user/signup
+                - input [user_details{}]
+                - output status code [201]
+        - Sign in
+                - signature /api/v1/user/signin
+                - input [username, email,password]
+                - output status code [200], Token
+        - Signout
+                - signature /api/v1/user/signout
+                - input [customer_id]
+                - output status code [200]
+        - Forget password
+                - signature /api/v1/user/forgetpass
+                - input [email]
+                - output status code [200]
+        - Enable/disable account
+                - signature /api/v1/user/account
+                - input [customer_id, event_type]
+                - output status code [200]
+        - Show Profile
+                - signature /api/v1/user/profile/:user_id
+                - input [user_id]
+                - output status code [200], user_details
+        - Edit Profile
+                - signature /api/v1/user/profile/:user_id
+                - input [user_id,update_data]
+                - output status code [201]
+#### Cart management 
+        - AddToCart
+                - signature /api/v1/cart/add
+                - input [customer_id,cart_items[]]
+                - output status code [201]
+        - ModifyCart
+                - signature /api/v1/cart/:cart_id
+                - input [cart_id, item_id, event_type]
+                - output status code [201]
+        - clearCart
+                - signature /api/v1/cart/:cart_id
+                - input [customer_id,cart_id]
+                - output status code [200]
+#### Order management 
         - placeOrder
                 - signature /api/v1/order/add
                 - input [customer_id,order_items[]]
@@ -206,8 +255,44 @@ decrementQuantity(cart_id, item_id);
                 - signature /api/v1/order
                 - input [customer_id]
                 - output orders[]
-        - checkout
-                - signature /api/v1/checkout
-                - input [customer_id,total_amount]
-                - output status code [201], transaction_details
-                - output status code [201]            
+#### Resturant & Menu management 
+        - AddResturant
+                - signature /api/v1/Resturant/add
+                - input [partner_id,Resturant_details]
+                - output status code [201]
+        - updateResturant = put
+                - signature /api/v1/resturant/:resturant_id
+                - input [resturant_id,updated_data]
+                - output status code [201]
+        - deleteResturant
+                - signature /api/v1/resturant/:resturant_id
+                - input [resturant_id]
+                - output status code 200
+        - viewResturants
+                - signature /api/v1/resturant
+                - input []
+                - output resturants[]
+        - viewResturant
+                - signature /api/v1/resturant/:resturant_id
+                - input [resturant_id]
+                - output resturant_details{}
+        - addMenu
+                - signature /api/v1/resturant/menu/add
+                - input [resturant_id,menu_details]
+                - output status code [201]
+        - updateMenu
+                - signature /api/v1/resturant/menu/:menu_id
+                - input [menu_id, update_data]
+                - output status code [201]
+        - deleteMenu
+                - signature /api/v1/resturant/menu/:menu_id
+                - input [menu_id]
+                - output status code [200]
+        - viewMenu
+                - signature /api/v1/resturant/menu/:menu_id
+                - input [menu_id]
+                - output menu_details
+        - filterMenu
+                - signature /api/v1/resturant/menu/filter
+                - input [search_word]
+                - output menu_details[]
