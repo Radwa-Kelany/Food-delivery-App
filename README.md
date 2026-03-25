@@ -187,9 +187,11 @@ decrementQuantity(cart_id, item_id);
 ### API Signature 
 #### User Registeration
         - Sign up
-                - signature /api/v1/user/signup
-                - input [user_details{}]
-                - output status code [201]
+                - method: post
+                - signature: /api/v1/user/signup
+                - input: user_details{}
+                - output: success [201]
+                          failed [ 400 ]
         - Sign in
                 - signature /api/v1/user/signin
                 - input [username, email,password]
