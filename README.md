@@ -190,32 +190,53 @@ decrementQuantity(cart_id, item_id);
                 - method: post
                 - signature: /api/v1/user/signup
                 - input: user_details{}
-                - output: success [201]
+                - output: success [201], accessToken:string
                           failed [ 400 ]
         - Sign in
+                - method: post
                 - signature /api/v1/user/signin
-                - input [username, email,password]
-                - output status code [200], Token
+                - input email:string,password:string
+                - output success [200], accessToken:string
+                         failed [ 401] unauthorized
         - Signout
+                - method: post
                 - signature /api/v1/user/signout
-                - input [customer_id]
-                - output status code [200]
+                - input customer_id: string
+                - output Success [200]
+                         failed [ 401] unauthorized
         - Forget password
-                - signature /api/v1/user/forgetpass
+                - method: post
+                - signature /api/v1/user/forget-password
                 - input [email]
-                - output status code [200]
+                - output Success [200]
+                         failed [ 401] unauthorized
+        - Reset password
+                - method: put
+                - signature /api/v1/user/reset-password?token=abc123
+                - input {token, newPassword}
+                - output  success [200]
+                          failed  [400] expire token
         - Enable/disable account
+                - method: put
                 - signature /api/v1/user/account
-                - input [customer_id, event_type]
-                - output status code [200]
+                - input [customer_id, enable]
+                - output success [200]
+                         failed [ 401] unauthorized
+                         failed [400] bad request
         - Show Profile
+                - method: get
                 - signature /api/v1/user/profile/:user_id
                 - input [user_id]
-                - output status code [200], user_details
+                - output success [200], user_details{}
+                          failed [ 401] unauthorized
+                          failed [400] bad request
         - Edit Profile
+                - method: put
                 - signature /api/v1/user/profile/:user_id
-                - input [user_id,update_data]
-                - output status code [201]
+                - input user_id,update_data{}
+                - output success [201]
+                         failed [ 401] unauthorized
+                         failed [400] bad request
 #### Cart management 
         - AddToCart
                 - signature /api/v1/cart/add
